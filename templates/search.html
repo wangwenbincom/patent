@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title|safe }}{% endblock %}
+
+{% block content %}
+{% from "_field.html" import render_field %}
+<form method="POST" action="{{ url_for('search') }}">
+    {{ form.hidden_tag() }}
+    <table>
+        {{ render_field(form.trade) }}
+        {{ render_field(form.query) }}
+        {{ render_field(form.ptype) }}
+        {{ render_field(form.cond) }}
+    </table>
+    {{ form.submit() }}
+</form>
+
+{% endblock %}

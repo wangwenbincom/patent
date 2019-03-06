@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% include 'include/_head.html' %}
+</head>
+
+<body>
+    <div id="login-page">
+        <div class="container">
+            <form class="form-login" method="post">
+                <h2 class="form-login-heading">注册</h2>
+                <div class="login-wrap">
+                    {{ form.username(class_='form-control',placeholder="用户名") }}
+                    <br>
+                    {{ form.password(class_='form-control',placeholder="密码") }}
+                    <br>
+                    {{ form.password2(class_='form-control',placeholder="确认密码") }}
+                    <br>
+                    {{ form.email(class_='form-control',placeholder="邮箱") }}
+                    <br>
+                    {{ form.submit(class="btn btn-theme btn-block",value="注册") }}
+                    {{ form.csrf_token }}
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.backstretch.min.js"></script>
+    <script>$.backstretch("../static/img/ui-bg3.jpg", {speed: 500});</script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>
+    <i class="fa fa-angle-right"></i>
+    搜索结果列表 {% if is_buy%} (BUY) {% else %} (SELL) {% endif %}
+</h3>
+<div class="row mt">
+    <div class="col-lg-12">
+        <section id="unseen">
+            <table class="table table-hover">
+                <thead>
+                <tr class="info">
+                    {% if is_buy %}
+                    <th>关键词</th>
+                    {% else %}
+                    <th>专利号</th>
+                    <th>专利名</th>
+                    {% endif %}
+
+                    <th>专利类型</th>
+                    <th>专利状态</th>
+                    <th>时间</th>
+                    <th>联系方式</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for result in results %}
+                <tr class="warning">
+                    {% if is_buy %}
+                    <td>{{ result['raw'] }}</td>
+                    {% else %}
+                    <td>{{ result['pid'] }}</td>
+                    <td>{{ result['title'] }}</td>
+                    {% endif %}
+                    <td>{{ result['ptype'] }}</td>
+                    <td>{{ result['cond'] }}</td>
+                    <td class="numeric">{{ result['time'] }}</td>
+                    <td class="numeric">{{ result['contact'] }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </div><!-- /col-lg-4 -->
+</div><!-- /row -->
+
+{% endblock %}

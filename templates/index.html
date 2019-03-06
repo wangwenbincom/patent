@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title|safe }}{% endblock %}
+
+{% block content %}
+    <h1>主页</h1>
+    <div class="panel panel-default">
+        <ul class="list-group">
+            <li class="list-group-item" style="font-size: medium">
+                <span>全部</span>
+                <span class="post-date navbar-right"> | 创建时间</span>
+                <span class="post-author navbar-right">作者</span>
+
+            </li>
+            {% for post in posts %}
+                <li class="list-group-item" style="font-size: medium">
+                    <a class="lead" href="{{ url_for('.article',art_id=post.id) }}">{{ post.title }}</a>
+                    <span class="post-date navbar-right"> | {{ post.create_time }}</span>
+                    <span class="post-author navbar-right">
+                            <a href="{{ url_for('.user', userid=post.user_id) }}">
+                                {{ post.user_id }}
+                            </a>
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

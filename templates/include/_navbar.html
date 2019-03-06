@@ -1,0 +1,34 @@
+<aside>
+    <header class="header black-bg" style="height: fit-content">
+        <a href="{{ url_for('.index') }}" class="logo"><b>专利检索</b></a>
+
+        <div class="top-menu">
+            <!--<form class="navbar-form navbar-right" role="search" action="{{ url_for('.search') }}">-->
+                <!--<div class="form-group">-->
+                    <!--<input class="form-control" placeholder="Search" type="text" name="query">-->
+                <!--</div>-->
+                <!--<button type="submit" class="btn btn-theme">Submit</button>-->
+            <!--</form>-->
+            <ul class="nav navbar-nav navbar-right" style="font-size: medium;color: white ">
+                <li>
+                    <a href="{{ url_for('.index') }}"><b>首页</b></a>
+                </li>
+                <li>
+                    <a href="{{ url_for('.index') }}"><b>个人界面</b></a>
+                </li>
+                <li>
+                    <a href="{{ url_for('.simple_search') }}"><b>简单搜索</b></a>
+                </li>
+                <li>
+                    <a href="{{ url_for('.search') }}"><b>高级搜索</b></a>
+                </li>
+                <li>
+                    <a href="{{ url_for('.login') }}"><b>登陆</b></a>
+                </li>
+                <li>
+                    <a href="{{ url_for('.register') }}"><b>注册</b></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+</aside>

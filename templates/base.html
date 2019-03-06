@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+    {% include ['include/_head.html'] %}
+{% endblock %}
+<body>
+{% block navbar %}
+    {% include 'include/_navbar.html' %}
+{% endblock %}
+
+{% block sidebar %}
+    {% include 'include/_sidebar.html' %}
+{% endblock %}
+
+<div id="container">
+    <section id="main-content">
+        <section class="wrapper">
+            {% block content %}
+            {% endblock %}
+        </section>
+    </section>
+</div>
+
+</body>
+</html>

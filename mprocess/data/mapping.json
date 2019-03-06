@@ -1,0 +1,83 @@
+{
+  "sell_mapping": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "title": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_max_word"
+      },
+      "jieba_kw": {
+        "type": "keyword"
+      },
+      "ptype": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_max_word"
+      },
+      "cond": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_max_word"
+      },
+      "time": {
+        "type": "date",
+        "format": "YYYY-MM-DD"
+      },
+      "contact": {
+        "type": "keyword"
+      },
+      "summary": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_max_word"
+      },
+      "sum_key": {
+        "type": "keyword"
+      }
+    }
+  },
+
+  "buy_mapping": {
+    "properties": {
+      "raw": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_max_word"
+      },
+      "hand_kw": {
+        "type": "keyword"
+      },
+      "jieba_kw": {
+        "type": "keyword"
+      },
+      "ptype": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_max_word"
+      },
+      "cond": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_max_word"
+      },
+      "other": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_max_word"
+      },
+      "time": {
+        "type": "date",
+        "format": "YYYY-MM-DD"
+      },
+      "contact": {
+        "type": "keyword"
+      },
+      "synonym": {
+        "type": "keyword"
+      }
+    }
+  }
+}
